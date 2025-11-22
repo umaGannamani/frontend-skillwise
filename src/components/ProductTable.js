@@ -7,7 +7,7 @@ export default function ProductTable({ searchQuery }) {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const fetchProducts = async () => {
-    const res = await fetch("http://localhost:5000/api/products");
+    const res = await fetch("https://backend-skillwise.onrender.com/api/products");
     const data = await res.json();
     setProducts(data);
   };

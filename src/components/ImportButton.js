@@ -10,7 +10,7 @@ export default function ImportButton() {
     const formData = new FormData();
     formData.append("csvFile", file);
 
-    const res = await fetch("http://localhost:5000/api/products/import", {
+    const res = await fetch("https://backend-skillwise.onrender.com/api/products/import", {
       method: "POST",
       body: formData,
     });

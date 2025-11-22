@@ -9,7 +9,7 @@ export default function ProductRow({ product, fetchProducts, onViewHistory }) {
   };
 
   const handleSave = async () => {
-    await fetch(`http://localhost:5000/api/products/${product.id}`, {
+    await fetch(`https://backend-skillwise.onrender.com/api/products/${product.id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
@@ -20,7 +20,7 @@ export default function ProductRow({ product, fetchProducts, onViewHistory }) {
 
   const handleDelete = async () => {
     if (!window.confirm("Are you sure?")) return;
-    await fetch(`http://localhost:5000/api/products/${product.id}`, {
+    await fetch(`https://backend-skillwise.onrender.com/api/products/${product.id}`, {
       method: "DELETE",
     });
     fetchProducts();

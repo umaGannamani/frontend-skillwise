@@ -6,7 +6,7 @@ export default function InventoryHistory({ product, onClose }) {
   useEffect(() => {
   const fetchHistory = async () => {
     const res = await fetch(
-      `http://localhost:5000/api/products/${product.id}/history`
+      `https://backend-skillwise.onrender.com/api/products/${product.id}/history`
     );
     const data = await res.json();
     setHistory(data);
