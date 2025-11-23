@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+📦 Inventory Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack inventory management application built using React (Frontend) and Node.js + Express + SQLite (Backend).
+This app supports product management, stock updates, and inventory history tracking.
 
-## Available Scripts
+🚀 Features
+Frontend
+Add, edit, delete products
+Update stock (increase/decrease)
+View inventory history
+Fully responsive UI
+API integration with backend
+Error handling + loading states
 
-In the project directory, you can run:
+Backend
+REST API using Express.js
+Endpoints for products, stock updates, and history
+SQLite database
+CRUD operations
+CORS enabled
 
-### `npm start`
+🔧 Installation Guide
+1️⃣ Clone the project
+git https://github.com/umaGannamani/frontend-skillwise.git
+cd inventory-management
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🖥️ Backend Setup
+2️⃣ Install backend dependencies
+cd backend
+npm install
+3️⃣ Run backend server
+node server.js
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+You should see:
+Server running on port 5000
+Connected to SQLite database
 
-### `npm test`
+Backend runs at:
+👉 http://localhost:5000
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🌐 Frontend Setup
+4️⃣ Install frontend dependencies
+cd frontend
+npm install
 
-### `npm run build`
+5️⃣ Start React frontend
+npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🔗 Connecting Frontend With Backend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In frontend/src/api.js:
+export const API_URL = "https://backend-skillwise.onrender.com"; 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+OR for local testing:
 
-### `npm run eject`
+export const API_URL = "http://localhost:5000";
+Frontend runs at:
+👉 http://localhost:3000
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🧪 API Testing (Postman)
+Example Endpoints
+Method	Endpoint	Description
+GET	/api/products	Get all products
+GET	/api/products/:id	Get single product
+POST	/api/products	Add product
+PUT	/api/products/:id	Update product
+DELETE	/api/products/:id	Delete product
+POST	/api/history/update-stock	Update stock
+GET	/api/history	Inventory history
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+📝 Deployment
+Backend can be deployed on:
+Render : https://backend-skillwise.onrender.com
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Frontend can be deployed on:
+Vercel : https://frontend-skillwise.vercel.app/
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Remember to update production API URL in:
+src/api.js
